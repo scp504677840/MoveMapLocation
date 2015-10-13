@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/main_top_RL"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/main_bdmap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="true"></com.baidu.mapapi.map.MapView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/baidumap_ico_poi_on" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/main_pois"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffcccccc"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/main_search_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="请输入地址" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/main_search_pois"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffcccccc"
+            android:visibility="gone"></ListView>
+    </LinearLayout>
+
+
+</RelativeLayout>
